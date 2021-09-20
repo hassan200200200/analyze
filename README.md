@@ -1,85 +1,53 @@
-# Analyze
+# Landing Page Project
+its page contain 4 sections
+every <section> ==> has insid it container to organize other elements
+other elements inside container <div> ==> every container containe 1 header <h2> and 2 paragraph <p> inside it
+when you move to any <section> it will take class active that will make the active class is unique
+
+## tools of controll
+is navList <nav> element
+that contain <a> as first element and its just appear in small windows to open and close navigation bar
+our <ul> is container of <li> that contains also other <a> element
+element <a> inside li is button to move form <section> to other
+every <a> has the name of the <section> it will direct to
 
 
-### Contents:
+## Table of Contents
 
-- [Description](#description).
-- [App URL](#app-url).
-- [React App Hierarchy](#react-app-hierarchy).
-- [Dependencies](#dependencies).
-- [Installation](#installation).
-- [How To Use](#how-to-use).
-
-
-## Description
-
-- Analyze is a Chart Dashboard consists of 10 Charts and developed by React js.
-- It represents a data set of 2000 records.
-- The data is imported from a JSON file.
-- The app can be used to represent, filter data by different dimensions.
-- Dimensions used are:
-  1. Payment Method.
-  2. Delivery Area.
-  3. Order Amount.
-  4. Branch.
-  5. Order Date.
-- Types of Charts used to represent data are:
-  1. Pie Chart.
-  2. Bar Chart.
-  3. Line Chart(Time Series Chart).
-- The app gives user the ability to either reset individual dimension, or reset all dimensions.
-
-
-## App URL
-
-- https://analyzcharts.netlify.com
-
-
-## React App Hierarchy
-
-  ```bash
-├── <App />
-        ├── <OrderCountCharts />
-        |       
-        |       
-        ├──<RevenueCharts />
+|----<body>
         |
+        |---<header.page__header>
+        |                   |-----<nav.navbar__menu>
+        |                               |-----<a.navIcon>
+        |                               |-----<ul#navbar__list>
+        |                                               |-----<li>-----<a>
         |
-        └──<TimeSeriesCharts />
-```
+        |---<main>
+        |       |-----<header.main__hero>
+        |       |                   |------------<h1>
+        |       |-----<section#id> x4
+        |                       |-------<div.container>
+        |                                         |------<h2>
+        |                                         |------<p>
+        |                                         |------<p>
+        |      
+        |---<footer>
+
+* [Instructions](#instructions)
+
+## Instructions
+1- open index.html
+2- to move to any section you want just click on its name in navigation bar
+3- if U use any small device you will not see list of nav bar so follow this steps
+    a- on the top of page you will see this sign |||
+    b- please click on sign
+    c- it will open nav list and sign will convert to X 
+    d- click on section name that u want to move to it
+    e- if u want to close nav list please click on X
 
 
-## Dependencies
+The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-- [crossfilter2](https://crossfilter.github.io/crossfilter/): An extension of crossfilter. It overcomes the limit of array width of more than 32. This drawback appears with multiple filtration of different dimensions.
-- [victory js](https://github.com/FormidableLabs/victory): A collection of composable React components for building interactive data visualizations
-- [prop-types](https://github.com/facebook/prop-types).
+To get started, open `js/app.js` and start building out the app's functionality
 
-
-## Installation
-
-You can either:
-1. Visit the [App web page](https://analyzcharts.netlify.com)./ Or
-2. Download a compressed version from [here](https://github.com/Islam888/analyze/archive/master.zip). Then:
-  - Decompress the app.
-  - In your terminale locate the app directory and run `npm install`.
-    - To run development mood:
-      1. After finishing run `npm start`.
-      2. A browser tab will open at a localhost port 3000.
-    - To run production mood:
-      1. run `npm run build`.
-      2. Then to serve it with a static server run `npm install -g serve`.
-      3. Then run `serve -s build`.
-
-
-## How To Use
-
-- Filter Data through each of the methods below:
-  1. Filter through pie charts by clicking on individual slices.
-  2. Filter through bar chart of Branches, or Delivery area dimensions by clicking on individual bars.
-  3. Filter through other bar charts, by brushing through charts. You can drar, or resize brush to filter dimension, and also you can click on the chart to select all dimension.
-  4. Filter through line charts (Time series charts) by brushing through charts.
-- Reset all filtration by clicking any of Reset All button.
-
-
-
+For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
